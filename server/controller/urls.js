@@ -23,7 +23,7 @@ export async function shortUrl(req, res) {
             await user.shortUrls.push(result.id);
             await user.save();
         }
-        res.json({ status: "success", message: `Your short Url is http://localhost:5173/${short}`, url:short })
+        res.json({ status: "success", message: `Your short Url is https://shortify-ashen.vercel.app/${short}`, url:short })
     } catch {
         res.json({ status: "failed", message: "Custom ID already used, Enter unique custom id" });
     }
