@@ -45,21 +45,27 @@ export async function redirectToUrl(req, res) {
 
 export async function getUrls(req, res) {
     const user = req.user;
-    if (!user) res.json({ status: "failed", message: "User not found" });
+    if (!user) res.json({ status: "failed", message: "Please Login First" });
 
     else{
 
         const urlIdArray = user.shortUrls;
-        
-        try {
-            const urlArray = await Promise.all(
-                urlIdArray.map(async (id) => {
-                    return await URL.findById(id);
-                })
-            );
-            res.json({status:"success", data:urlArray})
-        } catch {
-            res.json({ status: "failed", message: "No urls found" });
+
+        if(urlIdArray.length==0) res.json({ status: "failed", message: "No urls found" });
+
+        else{
+
+            
+            try {
+                const urlArray = await Promise.all(
+                    urlIdArray.map(async (id) => {
+                        return await URL.findById(id);
+                    })
+                );
+                res.json({status:"success", data:urlArray})
+            } catch {
+                res.json({ status: "failed", message: "No urls found" });
+            }
         }
     }
 }

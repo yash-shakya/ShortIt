@@ -3,6 +3,7 @@ import axios from 'axios'
 
 function MyUrls() {
     const [urls, setUrls] = useState([]);
+    const [message, setMessage] = useState("")
 
     function getCookie(name) {
         const cookieString = document.cookie;
@@ -22,7 +23,11 @@ function MyUrls() {
         axios.get("http://localhost:4000/getUrls", { headers: { "token": token } })
             .then((res) => { 
                 if(res.data.status=="success"){
+                    console.log(res.data)
                     setUrls(res.data.data)
+                }
+                else{
+                    setMessage(res.data.message)
                 }
              })
     }, [])
@@ -36,7 +41,7 @@ function MyUrls() {
         <div className='w-auto height  bg-gray-900 flex justify-center text-white' >
             <div>
                 {urls.length==0 ? (
-                    <h1>Please Login first</h1>
+                    <h1>{message}</h1>
                 ) : (
                     <table >
                         <thead>
