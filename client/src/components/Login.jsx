@@ -7,7 +7,7 @@ function Login() {
     const [password,setPassword] = useState("")
 
     const login = ()=>{
-        axios.post(`http://localhost:4000/user/login`,{email:email,password:password})
+        axios.post(`https://shortit-2eym.onrender.com/user/login`,{email:email,password:password})
         .then((res)=>{
             if(res.data.status=="success"){
                 document.cookie=`token=${res.data.token}; path=/;`;

@@ -7,7 +7,7 @@ function Redirect() {
 
     useEffect(()=>{
         console.log(param.id)
-        axios.get(`http://localhost:4000/${param.id}`)
+        axios.get(`https://shortit-2eym.onrender.com/${param.id}`)
         .then((res)=>window.location.href=res.data.url)
     },[param])
 

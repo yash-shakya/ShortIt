@@ -22,7 +22,7 @@ function NavBar() {
   useEffect(() => {
     const token = getCookie("token")
     if (token) {
-      axios.get("http://localhost:4000/getUser", { headers: { "token": token } })
+      axios.get("https://shortit-2eym.onrender.com/getUser", { headers: { "token": token } })
         .then((res) => setUser(res.data))
     }
   }, [user]);

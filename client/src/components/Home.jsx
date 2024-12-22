@@ -22,7 +22,7 @@ function Home() {
     }
 
     const generateShortUrl = ()=>{
-        axios.post('http://localhost:4000/create',{mainUrl:url,shortUrl:custom},{
+        axios.post('https://shortit-2eym.onrender.com/create',{mainUrl:url,shortUrl:custom},{
             headers:{
                 "token":getCookie("token")
             }
