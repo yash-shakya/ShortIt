@@ -1,4 +1,4 @@
-# Short It
+# Shortify
 
 Short It is a URL shortening service built with a React frontend and an Express.js backend. It allows users to create short URLs for their long URLs and manage their shortened URLs.
 
