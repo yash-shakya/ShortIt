@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Login from "./Login";
 import Signup from "./Signup";
-import Redirect from "./redirect";
-import MyUrls from "./myUrls";
+import Redirect from "./Redirect";
+import MyUrls from "./MyUrls";
 
 export {NavBar,Footer,Home,Login,Signup,Redirect,MyUrls} 
