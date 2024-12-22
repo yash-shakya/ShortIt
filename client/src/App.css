@@ -1,0 +1,67 @@
+.height{
+    height: 72vh;
+}
+
+/* General Table Styles */
+table {
+    width: 80vw; /* Full width */
+    border-collapse: collapse; /* Remove spacing between table cells */
+    overflow: hidden; /* Hide overflow *//* Light background for the table */
+    border: 1px solid #f11919; /* Subtle border */
+    margin: 20px 0; /* Add some space above and below the table */
+    font-family: Arial, sans-serif; /* Nice readable font */
+    font-size: 16px; /* Slightly larger text */
+    /* border-radius: 12px; */
+  }
+  
+  /* Header Styles */
+  thead {
+    background-color: rgb(75 85 99 ); /* Blue header */
+    color: white; /* White text for contrast */
+  }
+  
+  thead th {
+    padding: 12px 15px; /* Space inside header cells */
+    text-align: left; /* Left-align header text */
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize headers */
+    border-bottom: 2px solid rgb(75 85 99 ) /* Subtle darker bottom border */
+  }
+  
+  /* Row Styles */
+  tbody tr {
+    transition: background-color 0.2s ease; /* Add hover effect */
+  }
+  
+  
+  
+  tbody tr:hover {
+    background-color: #ddd;
+    color: black; /* Highlight row on hover */
+  }
+  
+  /* Cell Styles */
+  td {
+    padding: 12px 15px; /* Space inside table cells */
+    text-align: left; /* Left-align content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (…) for overflowing text */
+    max-width: 200px; /* Limit the cell width */
+  }
+  
+  /* Add a border between rows and columns */
+  td, th {
+    border: 1px solid #ddd;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    table {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  
+    td, th {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+  }
