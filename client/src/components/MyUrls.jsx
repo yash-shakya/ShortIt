@@ -33,7 +33,7 @@ function MyUrls() {
     }, [])
 
     const copyUrl = (custom)=>{
-        window.navigator.clipboard.writeText(`http://localhost:5173/${custom}`)
+        window.navigator.clipboard.writeText(`https://shortify-ashen.vercel.app/${custom}`)
         alert("URL Copied")
     }
 
