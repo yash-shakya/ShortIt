@@ -11,17 +11,17 @@ function Footer() {
             Follow me on: 
                 <Link to="https://github.com/yash-shakya">
                     <div className='flex gap-2 items-center'>
-                        <img className='size-7' src="src\assets\Github.png" alt="github" /> Github
+                        <img className='size-7' src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png" alt="github" /> Github
                     </div>
                 </Link>
                 <Link to="https://www.linkedin.com/in/yash-shakya-1b52332b8/">
                     <div className='flex gap-2 items-center'>
-                        <img className='size-7' src="src\assets\linkedin.png" alt="LinkedIn" /> LinkedIn
+                        <img className='size-7' src="https://cdn-icons-png.flaticon.com/128/145/145807.png" alt="LinkedIn" /> LinkedIn
                     </div>
                 </Link>
                 <Link to="https://www.instagram.com/suspici.yash">
                     <div className='flex gap-2 items-center'>
-                        <img className='size-7' src="src\assets\Instagram.png" alt="Instagram" /> Instagram
+                        <img className='size-7' src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="Instagram" /> Instagram
                     </div>
                 </Link>
         </div>
