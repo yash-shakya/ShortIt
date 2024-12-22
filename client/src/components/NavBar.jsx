@@ -34,7 +34,7 @@ function NavBar() {
 
   return (
     <div className='relative flex items-center justify-between px-5 text-2xl h-20 bg-gray-600 text-gray-50 border-t border-b border-zinc-400 '>
-      <h1 className='font-bold hoverp'><b><i><Link to="/">Short It</Link></i></b></h1>
+      <h1 className='font-bold hoverp'><b><i><Link to="/">Shortify</Link></i></b></h1>
       {!user ? (
         <></>
       ):(
