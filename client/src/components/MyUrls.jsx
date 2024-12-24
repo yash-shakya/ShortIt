@@ -57,7 +57,7 @@ function MyUrls() {
                                 <tr key={ind}>
                                     <td className='w-4'>{ind + 1}</td>
                                     <td>{e.mainUrl}</td>
-                                    <td>{`http:https://shortify-ashen.vercel.app/${e.shorturl}`}</td>
+                                    <td>{`https://shortify-ashen.vercel.app/${e.shorturl}`}</td>
                                     <td className='w-4 '><button onClick={()=>{copyUrl(e.shorturl)}} className='bg-blue-500 px-4 py-2 rounded-lg'>Copy</button></td>
                                 </tr>
                             )}
