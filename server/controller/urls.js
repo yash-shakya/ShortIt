@@ -11,21 +11,28 @@ export async function shortUrl(req, res) {
     let short=null;
     const { mainUrl, shortUrl } = body;
 
-    if (!shortUrl) {short = shortid();}
-    else {short = shortUrl;}
+    if(!mainUrl){
+        return res.json({status: "failed", message: "url can not be empty!"})
+    }
+    else{
+        
 
-    try {
-        const result = await URL.create({
-            mainUrl: mainUrl,
-            shorturl: short
-        })
-        if (user) {
-            await user.shortUrls.push(result.id);
-            await user.save();
+        if (!shortUrl) {short = shortid();}
+        else {short = shortUrl;}
+
+        try {
+            const result = await URL.create({
+                mainUrl: mainUrl,
+                shorturl: short
+            })
+            if (user) {
+                await user.shortUrls.push(result.id);
+                await user.save();
+            }
+            res.json({ status: "success", message: `Your short Url is https://shortify-ashen.vercel.app/${short}`, url:short })
+        } catch {
+            res.json({ status: "failed", message: "Custom ID already used, Enter unique custom id" });
         }
-        res.json({ status: "success", message: `Your short Url is https://shortify-ashen.vercel.app/${short}`, url:short })
-    } catch {
-        res.json({ status: "failed", message: "Custom ID already used, Enter unique custom id" });
     }
 }
 
