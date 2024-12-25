@@ -13,6 +13,7 @@ const app=express();
 mongoose.connect(mongoUrl)
 .then(console.log("MongoDB connected successfully"))
 
+app.use(cors())
 app.use(express.json())
 
 routes(app);
