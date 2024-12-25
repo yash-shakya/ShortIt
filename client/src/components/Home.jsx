@@ -22,7 +22,7 @@ function Home() {
     }
 
     const generateShortUrl = ()=>{
-        axios.post('/api/create',{mainUrl:url,shortUrl:custom},{
+        axios.post('https://shortit-2eym.onrender.com/create',{mainUrl:url,shortUrl:custom},{
             headers:{
                 "token":getCookie("token")
             }
@@ -41,7 +41,7 @@ function Home() {
     }
 
     const copyUrl = ()=>{
-        window.navigator.clipboard.writeText(`https://shortify-ashen.vercel.app/${short}`)
+        window.navigator.clipboard.writeText(`https://shortify-yash.vercel.app/${short}`)
         alert("URL Copied")
     }
 

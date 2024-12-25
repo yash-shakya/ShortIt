@@ -20,7 +20,7 @@ function MyUrls() {
 
     useEffect(() => {
         const token = getCookie("token")
-        axios.get("/api/getUrls", { headers: { "token": token } })
+        axios.get("https://shortit-2eym.onrender.com/getUrls", { headers: { "token": token } })
             .then((res) => { 
                 if(res.data.status=="success"){
                     console.log(res.data)
@@ -33,7 +33,7 @@ function MyUrls() {
     }, [])
 
     const copyUrl = (custom)=>{
-        window.navigator.clipboard.writeText(`https://shortify-ashen.vercel.app/${custom}`)
+        window.navigator.clipboard.writeText(`https://shortify-yash.vercel.app/${custom}`)
         alert("URL Copied")
     }
 
@@ -57,7 +57,7 @@ function MyUrls() {
                                 <tr key={ind}>
                                     <td className='w-4'>{ind + 1}</td>
                                     <td>{e.mainUrl}</td>
-                                    <td>{`https://shortify-ashen.vercel.app/${e.shorturl}`}</td>
+                                    <td>{`https://shortify-yash.vercel.app/${e.shorturl}`}</td>
                                     <td className='w-4 '><button onClick={()=>{copyUrl(e.shorturl)}} className='bg-blue-500 px-4 py-2 rounded-lg'>Copy</button></td>
                                 </tr>
                             )}
