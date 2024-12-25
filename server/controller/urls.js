@@ -43,7 +43,8 @@ export async function redirectToUrl(req, res) {
 
     try {
         const response = await URL.findOne({ shorturl: shortId });
-        res.json({url:response.mainUrl});
+        if(!response) return res.json({ status: "failed", message: "Invalid Short Id" });
+        res.json({status:"success",url:response.mainUrl});
     } catch {
         res.json({ status: "failed", message: "Invalid Short Id" });
     }

@@ -14,7 +14,6 @@ mongoose.connect(mongoUrl)
 .then(console.log("MongoDB connected successfully"))
 
 app.use(express.json())
-app.use(cors());
 
 routes(app);
 
