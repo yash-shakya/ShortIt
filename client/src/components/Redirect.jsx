@@ -8,7 +8,7 @@ function Redirect() {
 
     useEffect(()=>{
         console.log(param.id)
-        axios.get(`https://shortit-2eym.onrender.com/${param.id}`)
+        axios.get(`https://shortify-server-yash.vercel.app/${param.id}`)
         .then((res)=>{
             if(res.data.status=="success"){
                 window.location.href=res.data.url

@@ -9,12 +9,12 @@ function Signup() {
 
     const signup = async () => {
         try {
-            const signupRes = axios.post("https://shortit-2eym.onrender.com/user/signup", { name: name, email: email, password: password })
+            const signupRes = axios.post("https://shortify-server-yash.vercel.app/user/signup", { name: name, email: email, password: password })
 
             if ((await signupRes).data.status == "success") {
                 alert("signup success");
 
-                const loginRes = axios.post("https://shortit-2eym.onrender.com/user/login", { email: email, password: password })
+                const loginRes = axios.post("https://shortify-server-yash.vercel.app/user/login", { email: email, password: password })
                 if ((await loginRes).data.status == "success") {
                     document.cookie = `token=${(await loginRes).data.token}; path=/;`;
                     window.location.href = "/"

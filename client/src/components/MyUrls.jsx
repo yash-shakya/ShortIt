@@ -20,7 +20,7 @@ function MyUrls() {
 
     useEffect(() => {
         const token = getCookie("token")
-        axios.get("https://shortit-2eym.onrender.com/getUrls", { headers: { "token": token } })
+        axios.get("https://shortify-server-yash.vercel.app/getUrls", { headers: { "token": token } })
             .then((res) => { 
                 if(res.data.status=="success"){
                     console.log(res.data)

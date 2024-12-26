@@ -22,7 +22,7 @@ function Home() {
     }
 
     const generateShortUrl = ()=>{
-        axios.post('https://shortit-2eym.onrender.com/create',{mainUrl:url,shortUrl:custom},{
+        axios.post('https://shortify-server-yash.vercel.app/create',{mainUrl:url,shortUrl:custom},{
             headers:{
                 "token":getCookie("token")
             }
